@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <title>Alfresco Content App</title>
+  <link rel="stylesheet" href="https://unpkg.com/docute@3/dist/docute.css">
+  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+</head>
+<body>
+  <div id="app"></div>
+  <script src="https://unpkg.com/docute@3/dist/docute.js"></script>
+  <script>
+    docute.init({
+        nav: [
+            {
+                title: 'Home',
+                path: '/'
+            },
+            {
+                title: 'Features',
+                type: 'dropdown',
+                items: [
+                    {
+                        title: 'Introduction',
+                        path: 'features',
+                    },
+                    {
+                        title: 'Application Header',
+                        path: 'header'
+                    },
+                    {
+                        title: 'Side Navigation',
+                        path: 'side-nav'
+                    },
+                    {
+                        title: 'Document List',
+                        path: 'doc-list'
+                    }
+                ]
+            },
+            {
+                title: 'Building',
+                path: 'build'
+            },
+            {
+                title: 'Docker',
+                path: 'docker'
+            },
+            {
+                title: 'FAQ',
+                path: 'faq'
+            },
+            {
+                title: 'Guides',
+                type: 'dropdown',
+                items: [
+                    {
+                        title: 'Building',
+                        path: 'build'
+                    },
+                    {
+                        title: 'Internationalization (i18n)',
+                        path: 'i18n'
+                    },
+                    {
+                        title: 'CORS',
+                        path: 'cors'
+                    },
+                    {
+                        title: 'Configuration',
+                        path: 'configuration'
+                    },
+                    {
+                        title: 'Navigation',
+                        path: 'navigation'
+                    }
+                ]
+            }
+        ],
+        icons: [
+            {
+                icon: 'github',
+                label: 'Contribute on GitHub',
+                link: 'https://github.com/Alfresco/alfresco-content-app'
+            }
+        ]
+    })
+  </script>
+</body>
+</html>

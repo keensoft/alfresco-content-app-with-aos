@@ -1,0 +1,188 @@
+{
+  "APP": {
+    "LANGUAGE": "Lingua",
+    "SIGN_IN": "Accedi",
+    "SIGN_OUT": "Disconnetti",
+    "PREVIEW": {
+      "TITLE": "Anteprima"
+    },
+    "NEW_MENU": {
+      "LABEL": "Nuovo",
+      "MENU_ITEMS": {
+        "CREATE_FOLDER": "Crea cartella",
+        "UPLOAD_FILE": "Carica file",
+        "UPLOAD_FOLDER": "Carica cartella"
+      },
+      "TOOLTIPS": {
+        "CREATE_FOLDER": "Crea nuova cartella",
+        "CREATE_FOLDER_NOT_ALLOWED": "Impossibile creare una cartella qui. Si potrebbe non disporre dei permessi necessari; rivolgersi al team IT.",
+        "UPLOAD_FILES": "Seleziona file da caricare",
+        "UPLOAD_FILES_NOT_ALLOWED": "Per il caricamento sono necessari permessi; rivolgersi al team IT.",
+        "UPLOAD_FOLDERS": "Seleziona cartelle da caricare",
+        "UPLOAD_FOLDERS_NOT_ALLOWED": "Per il caricamento sono necessari permessi; rivolgersi al team IT."
+      }
+    },
+    "BROWSE": {
+      "PERSONAL": {
+        "TITLE": "File personali",
+        "SIDENAV_LINK": {
+          "LABEL": "File personali",
+          "TOOLTIP": "Visualizza i file personali"
+        }
+      },
+      "LIBRARIES": {
+        "TITLE": "Raccolte file",
+        "SIDENAV_LINK": {
+          "LABEL": "Raccolte file",
+          "TOOLTIP": "Accedi alle raccolte file"
+        },
+        "EMPTY_STATE": {
+          "TITLE": "L'utente non è ancora membro di alcuna Raccolta file",
+          "TEXT": "Iscriversi ai siti per caricare, visualizzare e condividere file."
+        }
+      },
+      "SHARED": {
+        "TITLE": "File condivisi",
+        "SIDENAV_LINK": {
+          "LABEL": "Condiviso",
+          "TOOLTIP": "Visualizza file condivisi"
+        },
+        "EMPTY_STATE": {
+          "TITLE": "Nessun file o cartella condivisi",
+          "TEXT": "Gli elementi condivisi con l'opzione Condividi vengono mostrati qui."
+        }
+      },
+      "RECENT": {
+        "TITLE": "File recenti",
+        "SIDENAV_LINK": {
+          "LABEL": "File recenti",
+          "TOOLTIP": "Visualizza i file modificati di recente"
+        },
+        "EMPTY_STATE": {
+          "TITLE": "Nessun file recente",
+          "TEXT": "Gli elementi caricati o modificati negli ultimi 30 giorni vengono mostrati qui."
+        }
+      },
+      "FAVORITES": {
+        "TITLE": "Preferiti",
+        "SIDENAV_LINK": {
+          "LABEL": "Preferiti",
+          "TOOLTIP": "Visualizza file e cartelle preferite"
+        },
+        "EMPTY_STATE": {
+          "TITLE": "Nessun file o cartella preferiti",
+          "TEXT": "Elementi preferiti da recuperare facilmente in un altro momento."
+        }
+      },
+      "TRASHCAN": {
+        "TITLE": "Cestino",
+        "SIDENAV_LINK": {
+          "LABEL": "Cestino",
+          "TOOLTIP": "Visualizza i file eliminati nel cestino"
+        },
+        "EMPTY_STATE": {
+          "TITLE": "Il cestino è vuoto",
+          "FIRST_TEXT": "Gli elementi eliminati vengono spostati nel cestino.",
+          "SECOND_TEXT": "Svuotare il cestino per eliminare definitivamente gli elementi."
+        }
+      },
+      "ABOUT": {
+        "TITLE": "Informazioni su"
+      }
+    },
+    "ACTIONS": {
+      "VIEW": "Visualizza",
+      "EDIT": "Modifica",
+      "DOWNLOAD": "Scarica",
+      "COPY": "Copia",
+      "MOVE": "Sposta",
+      "DELETE": "Elimina",
+      "DELETE_PERMANENT": "Elimina definitivamente",
+      "MORE": "Altre azioni",
+      "UNDO": "Annulla",
+      "RESTORE": "Ripristina",
+      "FAVORITE": "Preferito"
+    },
+    "DOCUMENT_LIST": {
+      "COLUMNS": {
+        "NAME": "Nome",
+        "SIZE": "Dimensione",
+        "MODIFIED_ON": "Modificato",
+        "MODIFIED_BY": "Modificato da",
+        "STATUS": "Stato",
+        "TITLE": "Titolo",
+        "LOCATION": "Località",
+        "SHARED_BY": "Condiviso da",
+        "DELETED_ON": "Eliminato",
+        "DELETED_BY": "Eliminato da"
+      }
+    },
+    "SITES_VISIBILITY": {
+      "PUBLIC": "Pubblico",
+      "MODERATED": "Moderato",
+      "PRIVATE": "Privato"
+    },
+    "MESSAGES": {
+      "ERRORS": {
+        "GENERIC": "Azione non eseguita correttamente. Riprovare o contattare il team IT.",
+        "CONFLICT": "Nome già in uso, provare un nome diverso.",
+        "NODE_MOVE": "Spostamento non eseguito correttamente, file con lo stesso nome già esistente.",
+        "EXISTENT_FOLDER": "Esiste già una cartella con questo nome. Provare un nome diverso.",
+        "NODE_DELETION": "Impossibile eliminare {{ name }}",
+        "NODE_DELETION_PLURAL": "Impossibile eliminare {{ number }} elementi",
+        "NODE_RESTORE": "Impossibile ripristinare {{ name }}",
+        "NODE_RESTORE_PLURAL": "Impossibile ripristinare {{ number }} elementi",
+        "PERMISSION": "Non si dispone dell'accesso per eseguire questa operazione",
+        "TRASH": {
+          "NODES_PURGE": {
+            "PLURAL": "Impossibile eliminare {{ number }} elementi",
+            "SINGULAR": "Impossibile eliminare {{ name }}"
+          },
+          "NODES_RESTORE": {
+            "PARTIAL_PLURAL": "{{ number }} elementi non ripristinati a causa dei problemi con il percorso di ripristino",
+            "NODE_EXISTS": "Impossibile eseguire il ripristino. {{ name }} è già esistente.",
+            "LOCATION_MISSING": "Impossibile ripristinare {{ name }}. Il percorso originale non esiste più.",
+            "GENERIC": "Si è verificato un problema durante il ripristino di {{ name }}"
+          }
+        }
+      },
+      "INFO": {
+        "TRASH": {
+          "NODES_PURGE": {
+            "PLURAL": "{{ number }} elementi eliminati",
+            "SINGULAR": "Elemento {{ name }} eliminato",
+            "PARTIAL_SINGULAR": "Elemento {{ name }} eliminato. Impossibile eliminare l'elemento {{ failed }}.",
+            "PARTIAL_PLURAL": "{{ number }} elementi eliminati, impossibile eliminare {{ failed }}"
+          },
+          "NODES_RESTORE": {
+            "PLURAL": "Ripristino eseguito correttamente",
+            "SINGULAR": "Elemento {{ name }} ripristinato"
+          }
+        },
+        "NODE_DELETION": {
+          "SINGULAR": "{{ name }} eliminato",
+          "PLURAL": "{{ number }} elementi eliminati",
+          "PARTIAL_SINGULAR": "Elemento {{ success }} eliminato, impossibile eliminare {{ failed }}",
+          "PARTIAL_PLURAL": "Elementi {{ success }} eliminati, impossibile eliminare {{ failed }}"
+        },
+        "NODE_COPY": {
+          "SINGULAR": "Elemento {{ success }} copiato",
+          "PLURAL": "Elementi {{ success }} copiati",
+          "PARTIAL_SINGULAR": "Elemento {{ success }} copiato. Impossibile copiare l'elemento {{ failed }}.",
+          "PARTIAL_PLURAL": "Elementi {{ success }} copiati. Impossibile copiare {{ failed }}.",
+          "FAIL_SINGULAR": "Impossibile copiare l'elemento {{ failed }}.",
+          "FAIL_PLURAL": "Impossibile copiare gli elementi {{ failed }}."
+        },
+        "NODE_MOVE": {
+          "SINGULAR": "Spostato {{ success }} elemento.",
+          "PLURAL": "Spostati {{ success }} elementi.",
+          "PARTIAL": {
+            "SINGULAR": "Elemento {{ partially }} parzialmente spostato.",
+            "PLURAL": "Elementi {{ partially }} parzialmente spostati.",
+            "FAIL": "Impossibile spostare {{ failed }}."
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+{
+    "ecmHost": "http://{hostname}{:port}",
+    "application": {
+        "name": "Alfresco Example Content Application",
+        "logo": "/assets/images/alfresco-logo-white.svg"
+    },
+    "headerColor": "#2196F3",
+    "languagePicker": false,
+    "document-list": {
+        "supportedPageSizes": [
+            25,
+            50,
+            100
+        ]
+    },
+    "files": {
+        "excluded": [
+            ".DS_Store",
+            "desktop.ini",
+            "thumbs.db",
+            ".git"
+        ]
+    },
+    "navigation": {
+        "main": [
+            {
+                "icon": "folder",
+                "label": "APP.BROWSE.PERSONAL.SIDENAV_LINK.LABEL",
+                "title": "APP.BROWSE.PERSONAL.SIDENAV_LINK.TOOLTIP",
+                "disabled": false,
+                "route": {
+                    "url": "/personal-files"
+                }
+            },
+            {
+                "icon": "group_work",
+                "label": "APP.BROWSE.LIBRARIES.SIDENAV_LINK.LABEL",
+                "title": "APP.BROWSE.LIBRARIES.SIDENAV_LINK.TOOLTIP",
+                "disabled": false,
+                "route": {
+                    "url": "/libraries"
+                }
+            }
+        ],
+        "secondary": [
+            {
+                "icon": "people",
+                "label": "APP.BROWSE.SHARED.SIDENAV_LINK.LABEL",
+                "title": "APP.BROWSE.SHARED.SIDENAV_LINK.TOOLTIP",
+                "disabled": false,
+                "route": {
+                    "url": "/shared"
+                }
+            },
+            {
+                "icon": "schedule",
+                "label": "APP.BROWSE.RECENT.SIDENAV_LINK.LABEL",
+                "title": "APP.BROWSE.RECENT.SIDENAV_LINK.TOOLTIP",
+                "disabled": false,
+                "route": {
+                    "url": "/recent-files"
+                }
+            },
+            {
+                "icon": "star",
+                "label": "APP.BROWSE.FAVORITES.SIDENAV_LINK.LABEL",
+                "title": "APP.BROWSE.FAVORITES.SIDENAV_LINK.TOOLTIP",
+                "disabled": false,
+                "route": {
+                    "url": "/favorites"
+                }
+            },
+            {
+                "icon": "delete",
+                "label": "APP.BROWSE.TRASHCAN.SIDENAV_LINK.LABEL",
+                "title": "APP.BROWSE.TRASHCAN.SIDENAV_LINK.TOOLTIP",
+                "disabled": false,
+                "route": {
+                    "url": "/trashcan"
+                }
+            }
+        ]
+    },
+    "languages": [
+        {
+            "key": "de",
+            "label": "German"
+        },
+        {
+            "key": "en",
+            "label": "English"
+        },
+        {
+            "key": "es",
+            "label": "Spanish"
+        },
+        {
+            "key": "fr",
+            "label": "French"
+        },
+        {
+            "key": "it",
+            "label": "Italian"
+        },
+        {
+            "key": "ja",
+            "label": "Japanese"
+        },
+        {
+            "key": "nb",
+            "label": "Norwegian"
+        },
+        {
+            "key": "nl",
+            "label": "Dutch"
+        },
+        {
+            "key": "pt-BR",
+            "label": "Brazilian Portuguese"
+        },
+        {
+            "key": "ru",
+            "label": "Russian"
+        },
+        {
+            "key": "zh-CN",
+            "label": "Simplified Chinese"
+        }
+    ]
+}

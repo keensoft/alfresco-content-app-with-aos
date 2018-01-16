@@ -1,0 +1,67 @@
+<div class="sidenav">
+    <div class="sidenav__section sidenav__section--new">
+        <button class="sidenav__section--new__button" mat-button [matMenuTriggerFor]="menu">
+            <span>{{ 'APP.NEW_MENU.LABEL' | translate }}</span>
+            <mat-icon>arrow_drop_down</mat-icon>
+        </button>
+
+        <mat-menu #menu="matMenu" [overlapTrigger]="false">
+            <button
+                mat-menu-item
+                [disabled]="!canCreateContent(node)"
+                [adf-create-folder]="node?.id"
+                title="{{
+                    ( canCreateContent(node)
+                        ? 'APP.NEW_MENU.TOOLTIPS.CREATE_FOLDER'
+                        : 'APP.NEW_MENU.TOOLTIPS.CREATE_FOLDER_NOT_ALLOWED'
+                    ) | translate
+                }}">
+                <mat-icon>create_new_folder</mat-icon>
+                <span>{{ 'APP.NEW_MENU.MENU_ITEMS.CREATE_FOLDER' | translate }}</span>
+            </button>
+
+            <adf-upload-button
+                tooltip="{{
+                    (canCreateContent(node)
+                        ? 'APP.NEW_MENU.TOOLTIPS.UPLOAD_FILES'
+                        : 'APP.NEW_MENU.TOOLTIPS.UPLOAD_FILES_NOT_ALLOWED'
+                    ) | translate }}"
+                [disabled]="!canCreateContent(node)"
+                [rootFolderId]="node?.id"
+                [multipleFiles]="true"
+                [uploadFolders]="false"
+                [staticTitle]="'APP.NEW_MENU.MENU_ITEMS.UPLOAD_FILE' | translate">
+            </adf-upload-button>
+
+            <adf-upload-button
+                tooltip="{{
+                    (canCreateContent(node)
+                        ? 'APP.NEW_MENU.TOOLTIPS.UPLOAD_FOLDERS'
+                        : 'APP.NEW_MENU.TOOLTIPS.UPLOAD_FOLDERS_NOT_ALLOWED'
+                    ) | translate }}"
+                [disabled]="!canCreateContent(node)"
+                [rootFolderId]="node?.id"
+                [multipleFiles]="true"
+                [uploadFolders]="true"
+                [staticTitle]="'APP.NEW_MENU.MENU_ITEMS.UPLOAD_FOLDER' | translate">
+            </adf-upload-button>
+        </mat-menu>
+    </div>
+
+    <div class="sidenav__section" *ngFor="let list of navigation">
+        <ul class="sidenav-menu">
+            <li class="sidenav-menu__item" *ngFor="let item of list">
+                <a
+                    class="sidenav-menu__item-link"
+                    [ngClass]="{ 'sidenav-menu__item-link--noicon' : !item.icon }"
+                    routerLinkActive="sidenav-menu__item-link--active"
+                    [routerLink]="item.disabled? null : item.route.url"
+                    [ngClass]="{ 'disabled': item.disabled }"
+                    title="{{ item.title || '' | translate }}">
+                    <mat-icon *ngIf="item.icon">{{ item.icon }}</mat-icon>
+                    {{ item.label | translate }}
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+version: '3.1'
+
+services:
+ app:
+  image: 'alfresco/content-app'
+  build: 'alfresco-content-app'
+  ports:
+    - 80:80
+ 
+ alfresco:
+  image: 'alfresco/content-services'
+  build: 'alfresco-content-services'
+ 
+ share:
+  image: 'alfresco/share'
+  build: ./share
+  ports:
+    - 8080:8080
+
+ db:
+  build: ./postgres
+  environment:
+   - POSTGRES_DB=alfresco
+   - POSTGRES_USER=alfresco
+   - POSTGRES_PASSWORD=alfresco
+
+ solr6:
+  image: keensoft/alfresco-solr6:201707-GA
+
+ libreoffice:
+  build: ./libreoffice

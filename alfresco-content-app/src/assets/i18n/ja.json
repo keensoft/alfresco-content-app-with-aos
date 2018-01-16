@@ -1,0 +1,188 @@
+{
+  "APP": {
+    "LANGUAGE": "言語",
+    "SIGN_IN": "サインイン",
+    "SIGN_OUT": "サインアウト",
+    "PREVIEW": {
+      "TITLE": "プレビュー"
+    },
+    "NEW_MENU": {
+      "LABEL": "新規",
+      "MENU_ITEMS": {
+        "CREATE_FOLDER": "フォルダの作成",
+        "UPLOAD_FILE": "ファイルのアップロード",
+        "UPLOAD_FOLDER": "フォルダのアップロード"
+      },
+      "TOOLTIPS": {
+        "CREATE_FOLDER": "新しいフォルダを作成します",
+        "CREATE_FOLDER_NOT_ALLOWED": "ここにフォルダを作成できません。必要な権限がない可能性があります。IT 担当者に確認してください。",
+        "UPLOAD_FILES": "アップロードするファイルを選択します",
+        "UPLOAD_FILES_NOT_ALLOWED": "ここにアップロードするための権限が必要です。IT 担当者に確認してください。",
+        "UPLOAD_FOLDERS": "アップロードするフォルダを選択します",
+        "UPLOAD_FOLDERS_NOT_ALLOWED": "ここにアップロードするための権限が必要です。IT 担当者に確認してください。"
+      }
+    },
+    "BROWSE": {
+      "PERSONAL": {
+        "TITLE": "個人用ファイル",
+        "SIDENAV_LINK": {
+          "LABEL": "個人用ファイル",
+          "TOOLTIP": "自分の個人用ファイルを表示します"
+        }
+      },
+      "LIBRARIES": {
+        "TITLE": "ファイルライブラリ",
+        "SIDENAV_LINK": {
+          "LABEL": "ファイルライブラリ",
+          "TOOLTIP": "ファイルライブラリにアクセスします"
+        },
+        "EMPTY_STATE": {
+          "TITLE": "あなたはまだファイルライブラリのメンバーではありません",
+          "TEXT": "ファイルをアップロード、表示、共有するサイトに参加してください。"
+        }
+      },
+      "SHARED": {
+        "TITLE": "共有ファイル",
+        "SIDENAV_LINK": {
+          "LABEL": "共有",
+          "TOOLTIP": "共有されているファイルを表示します"
+        },
+        "EMPTY_STATE": {
+          "TITLE": "共有しているファイルまたはフォルダはありません",
+          "TEXT": "Share オプションを使って共有しているアイテムがここに表示されます。"
+        }
+      },
+      "RECENT": {
+        "TITLE": "最近使用したファイル",
+        "SIDENAV_LINK": {
+          "LABEL": "最近使用したファイル",
+          "TOOLTIP": "最近編集したファイルを表示します"
+        },
+        "EMPTY_STATE": {
+          "TITLE": "最近使ったファイルはありません",
+          "TEXT": "過去 30 日間にアップロードまたは編集したアイテムがここに表示されます。"
+        }
+      },
+      "FAVORITES": {
+        "TITLE": "お気に入り",
+        "SIDENAV_LINK": {
+          "LABEL": "お気に入り",
+          "TOOLTIP": "お気に入りのファイルやフォルダを表示します"
+        },
+        "EMPTY_STATE": {
+          "TITLE": "お気に入りのファイルまたはフォルダはありません",
+          "TEXT": "後で簡単に見つけたいお気に入りのアイテム。"
+        }
+      },
+      "TRASHCAN": {
+        "TITLE": "ごみ箱",
+        "SIDENAV_LINK": {
+          "LABEL": "ごみ箱",
+          "TOOLTIP": "ごみ箱にある削除済みのファイルを表示します"
+        },
+        "EMPTY_STATE": {
+          "TITLE": "ごみ箱は空です",
+          "FIRST_TEXT": "削除したアイテムはごみ箱に移動されます。",
+          "SECOND_TEXT": "アイテムを完全に削除するには、ごみ箱を空にします。"
+        }
+      },
+      "ABOUT": {
+        "TITLE": "バージョン情報"
+      }
+    },
+    "ACTIONS": {
+      "VIEW": "表示",
+      "EDIT": "編集",
+      "DOWNLOAD": "ダウンロード",
+      "COPY": "コピー",
+      "MOVE": "移動",
+      "DELETE": "削除",
+      "DELETE_PERMANENT": "完全に削除する",
+      "MORE": "その他の処理",
+      "UNDO": "元に戻す",
+      "RESTORE": "復元",
+      "FAVORITE": "お気に入り"
+    },
+    "DOCUMENT_LIST": {
+      "COLUMNS": {
+        "NAME": "名前",
+        "SIZE": "サイズ",
+        "MODIFIED_ON": "変更日",
+        "MODIFIED_BY": "変更者",
+        "STATUS": "ステータス",
+        "TITLE": "タイトル",
+        "LOCATION": "場所",
+        "SHARED_BY": "共有者",
+        "DELETED_ON": "削除日",
+        "DELETED_BY": "削除者"
+      }
+    },
+    "SITES_VISIBILITY": {
+      "PUBLIC": "公開",
+      "MODERATED": "条件付き公開",
+      "PRIVATE": "非公開"
+    },
+    "MESSAGES": {
+      "ERRORS": {
+        "GENERIC": "処理が失敗しました。もう一度操作をやり直すか、IT 担当者に連絡してください。",
+        "CONFLICT": "この名前は既に使用されています。別の名前を使用してください。",
+        "NODE_MOVE": "移動できません。同じ名前のファイルが既に存在します。",
+        "EXISTENT_FOLDER": "この名前のフォルダが既に存在します。別の名前を使用してください。",
+        "NODE_DELETION": "{{ name }} を削除できませんでした",
+        "NODE_DELETION_PLURAL": "{{ number }} 件のアイテムを削除できませんでした",
+        "NODE_RESTORE": "{{ name }} を復元できませんでした",
+        "NODE_RESTORE_PLURAL": "{{ number }} 件のアイテムを復元できませんでした",
+        "PERMISSION": "この操作を行うための権限がありません",
+        "TRASH": {
+          "NODES_PURGE": {
+            "PLURAL": "{{ number }} 件のアイテムを削除できませんでした",
+            "SINGULAR": "{{ name }} を削除できませんでした"
+          },
+          "NODES_RESTORE": {
+            "PARTIAL_PLURAL": "{{ number }} 件のアイテムが復元されませんでした。復元先の場所に問題があります。",
+            "NODE_EXISTS": "復元できません。{{ name }} は既に存在します。",
+            "LOCATION_MISSING": "{{ name }} を復元できません。元の場所が削除されています。",
+            "GENERIC": "{{ name }} の復元中に問題が発生しました"
+          }
+        }
+      },
+      "INFO": {
+        "TRASH": {
+          "NODES_PURGE": {
+            "PLURAL": "{{ number }} 件のアイテムを削除しました",
+            "SINGULAR": "{{ name }} を削除しました",
+            "PARTIAL_SINGULAR": "{{ name }} を削除しましたが、{{ failed }} 件は削除できませんでした",
+            "PARTIAL_PLURAL": "{{ number }} 件のアイテムを削除しましたが、{{ failed }} 件は削除できませんでした"
+          },
+          "NODES_RESTORE": {
+            "PLURAL": "正常に復元されました",
+            "SINGULAR": "{{ name }} を復元しました"
+          }
+        },
+        "NODE_DELETION": {
+          "SINGULAR": "''{{ name }}'' アイテムを削除しました",
+          "PLURAL": "{{ number }} 件のアイテムを削除しました",
+          "PARTIAL_SINGULAR": "{{ success }} 件のアイテムを削除しましたが、{{ failed }} 件は削除できませんでした",
+          "PARTIAL_PLURAL": "{{ success }} 件のアイテムを削除しましたが、{{ failed }} 件は削除できませんでした"
+        },
+        "NODE_COPY": {
+          "SINGULAR": "{{ success }} 件のアイテムをコピーしました",
+          "PLURAL": "{{ success }} 件のアイテムをコピーしました",
+          "PARTIAL_SINGULAR": "{{ success }} 件のアイテムをコピーしましたが、{{ failed }} 件はコピーできませんでした。",
+          "PARTIAL_PLURAL": "{{ success }} 件のアイテムをコピーしましたが、{{ failed }} 件はコピーできませんでした。",
+          "FAIL_SINGULAR": "{{ failed }} 件のアイテムをコピーできませんでした。",
+          "FAIL_PLURAL": "{{ failed }} 件のアイテムをコピーできませんでした。"
+        },
+        "NODE_MOVE": {
+          "SINGULAR": "{{ success }} 件のアイテムを移動しました。",
+          "PLURAL": "{{ success }} 件のアイテムを移動しました。",
+          "PARTIAL": {
+            "SINGULAR": "一部のアイテム ({{ partially }} 件) を移動しました。",
+            "PLURAL": "一部のアイテム ({{ partially }} 件) を移動しました。",
+            "FAIL": "{{ failed }} 件を移動できませんでした。"
+          }
+        }
+      }
+    }
+  }
+}
