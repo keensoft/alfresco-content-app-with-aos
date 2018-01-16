@@ -1,21 +1,46 @@
 version: '3.1'
 
+networks:
+  appNet:
+
 services:
- app:
+ app.example.com:
   image: 'alfresco/content-app'
   build: 'alfresco-content-app'
+  networks:
+    appNet:
+      aliases:
+        - app.example.com
   ports:
-    - 80:80
+    - 3000:80
+
+ acs.example.com:
+  image: 'alfresco/proxy-reverse'
+  build: 'alfresco-proxy-reverse'
+  networks:
+    appNet:
+      aliases:
+        - acs.example.com
+  ports:
+    - 443:443
  
  alfresco:
   image: 'alfresco/content-services'
   build: 'alfresco-content-services'
+  networks:
+    appNet:
+      aliases:
+        - alfresco
  
  share:
   image: 'alfresco/share'
   build: ./share
   ports:
     - 8080:8080
+  networks:
+    appNet:
+      aliases:
+        - share
 
  db:
   build: ./postgres
@@ -23,9 +48,21 @@ services:
    - POSTGRES_DB=alfresco
    - POSTGRES_USER=alfresco
    - POSTGRES_PASSWORD=alfresco
+  networks:
+    appNet:
+      aliases:
+        - db
 
  solr6:
   image: keensoft/alfresco-solr6:201707-GA
+  networks:
+    appNet:
+      aliases:
+        - solr6
 
  libreoffice:
   build: ./libreoffice
+  networks:
+    appNet:
+      aliases:
+        - libreoffice

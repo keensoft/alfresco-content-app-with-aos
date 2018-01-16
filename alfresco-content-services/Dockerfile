@@ -82,6 +82,6 @@ RUN set -x \
         && chmod 0600 /home/alfresco/.pgpass \
         && chown alfresco:alfresco /home/alfresco/.pgpass
 
-EXPOSE 8080 8009 9999
+EXPOSE 8080 8009
 VOLUME $ALF_HOME/alf_data
 CMD ["./wait-for-postgres.sh", "db", "catalina.sh", "run"]

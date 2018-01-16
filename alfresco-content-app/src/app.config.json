@@ -1,5 +1,5 @@
 {
-    "ecmHost": "http://alfresco:8080",
+    "ecmHost": "https://acs.example.com",
     "application": {
         "name": "Alfresco Example Content Application",
         "logo": "/assets/images/alfresco-logo-white.svg"
