@@ -41,14 +41,10 @@ RUN set -x \
 	&& tar xzvf alfresco-pdf-renderer-1.0-linux.tgz -C /usr/local/alfresco/alfresco-pdf-renderer \
 	&& rm -f alfresco-pdf-renderer-1.0-linux.tgz 
 
-# AMPS installation
-COPY assets/alfresco/apply_alfresco_amps.sh $ALF_HOME/bin/apply_amps.sh
-COPY assets/amps amps
-RUN bash ./bin/apply_amps.sh -nobackup
 
 # Add api-explorer WAR file
 RUN set -x \
-	&& wget https://artifacts.alfresco.com/nexus/service/local/repositories/releases/content/org/alfresco/api-explorer/5.2.0/api-explorer-5.2.0.war -O tomcat/webapps/api-explorer.war
+        && wget https://artifacts.alfresco.com/nexus/service/local/repositories/releases/content/org/alfresco/api-explorer/5.2.0/api-explorer-5.2.0.war -O tomcat/webapps/api-explorer.war
 
 # Install Alfresco Office Services
 RUN set -x \
@@ -60,6 +56,14 @@ RUN set -x \
         && mv /tmp/aos/aos-module-license.txt licenses \
         && mv /tmp/aos/_vti_bin.war tomcat/webapps \
         && rm -rf /tmp/aos alfresco-aos-module-1.1.6.zip
+
+# AMPS installation
+COPY assets/alfresco/apply_alfresco_amps.sh $ALF_HOME/bin/apply_amps.sh
+COPY assets/amps amps
+RUN bash ./bin/apply_amps.sh -nobackup
+
+# JARS installation
+COPY assets/jars/ $ALF_HOME/modules/platform
 
 ENV PATH $ALF_HOME/bin:$PATH
 ENV LANG es_ES.utf8

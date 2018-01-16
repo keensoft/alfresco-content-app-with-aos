@@ -1,5 +1,5 @@
 {
-    "ecmHost": "http://{hostname}{:port}",
+    "ecmHost": "http://alfresco:8080",
     "application": {
         "name": "Alfresco Example Content Application",
         "logo": "/assets/images/alfresco-logo-white.svg"
