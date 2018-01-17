@@ -1,0 +1,35 @@
+{
+    "name": "adf-aos-editonline-action",
+    "version": "2.0.0",
+    "author": "keensoft",
+    "description": "Alfresco ADF AOS action",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/keensoft/alfresco-content-app-with-aos/adf-aos-action"
+    },
+    "bugs": {
+        "url": "https://github.com/keensoft/alfresco-content-app-with-aos/issues"
+    },
+    "dependencies": {
+        "@alfresco/adf-content-services": "2.0.0",
+        "@alfresco/adf-core": "2.0.0",
+        "alfresco-js-api": "2.0.0"
+    },
+    "devDependencies": {
+        "ng-packagr": "^1.6.0"
+    },
+    "es2015": "adf-aos-action.js",
+    "keywords": [
+        "Alfresco",
+        "AOS",
+        "ADF"
+    ],
+    "license": "GPL-3.0",
+    "main": "bundles/adf-aos-action.umd.js",
+    "metadata": "adf-aos-action.metadata.json",
+    "module": "adf-aos-action.es5.js",
+    "scripts": {
+        "package-aos": "ng-packagr -p ng-package.json"
+    },
+    "typings": "adf-aos-action.d.ts"
+}

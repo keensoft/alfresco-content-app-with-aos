@@ -52,7 +52,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { AboutComponent } from './components/about/about.component';
 import { LocationLinkComponent } from './components/location-link/location-link.component';
 
-import { AosModule } from './modules/aos/aos.module';
+import { AosModule } from 'adf-aos-editonline-action';
 
 @NgModule({
     imports: [

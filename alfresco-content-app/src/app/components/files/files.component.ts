@@ -38,7 +38,7 @@ import { NodeActionsService } from '../../common/services/node-actions.service';
 
 import { PageComponent } from '../page.component';
 
-import { AosEditOnlineService } from '../../modules/aos/aos.editonline.service';
+import { AosEditOnlineService } from 'adf-aos-editonline-action';
 
 @Component({
     templateUrl: './files.component.html'
