@@ -38,6 +38,8 @@ import { NodeActionsService } from '../../common/services/node-actions.service';
 
 import { PageComponent } from '../page.component';
 
+import { AosEditOnlineService } from '../../modules/aos/aos.editonline.service';
+
 @Component({
     templateUrl: './files.component.html'
 })
@@ -60,6 +62,7 @@ export class FilesComponent extends PageComponent implements OnInit, OnDestroy {
         private browsingFilesService: BrowsingFilesService,
         private contentService: ContentService,
         private apiService: AlfrescoApiService,
+        private aosEditOnlineService: AosEditOnlineService,
         preferences: UserPreferencesService) {
         super(preferences);
     }
@@ -293,5 +296,9 @@ export class FilesComponent extends PageComponent implements OnInit, OnDestroy {
             return this.node.path.elements[0].id === nodeId;
         }
         return false;
+    }
+
+    aosEditonline(event) {
+        this.aosEditOnlineService.onActionEditOnlineAos(event.value.entry);
     }
 }

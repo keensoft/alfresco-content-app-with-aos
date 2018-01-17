@@ -95,7 +95,7 @@
                 [allowDropFiles]="true"
 
                 [contextMenuActions]="true"
-                [contentActions]="false"
+                [contentActions]="true"
                 [navigate]="false"
                 [selectionMode]="'multiple'"
                 [imageResolver]="imageResolver"
@@ -142,6 +142,20 @@
                         title="APP.DOCUMENT_LIST.COLUMNS.MODIFIED_BY">
                     </data-column>
                 </data-columns>
+
+                 <content-actions>
+                    <content-action
+                        icon="build"
+                        target="document"
+                        permission="update"
+                        [disableWithNoPermission]="true"
+                        (permissionEvent)="handlePermissionError($event)"
+                        title="{{'AOS.ACTION.TITLE' | translate}}"
+                        (success)="onAosEditonlineActionSuccess($event)"
+                        (execute)="aosEditonline($event)">
+                    </content-action>
+                </content-actions>
+
             </adf-document-list>
 
             <ng-container *ngIf="!isEmpty">

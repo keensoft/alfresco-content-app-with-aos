@@ -52,7 +52,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { AboutComponent } from './components/about/about.component';
 import { LocationLinkComponent } from './components/location-link/location-link.component';
 
-// import { Ng2AlfrescoAosEditonlineModule, AOSEditOnlineService } from 'alfresco-aos-action';
+import { AosModule } from './modules/aos/aos.module';
 
 @NgModule({
     imports: [
@@ -63,8 +63,8 @@ import { LocationLinkComponent } from './components/location-link/location-link.
         }),
         AdfModule,
         CommonModule,
-        MaterialModule
-        // Ng2AlfrescoAosEditonlineModule
+        MaterialModule,
+        AosModule
     ],
     declarations: [
         AppComponent,
@@ -94,7 +94,6 @@ import { LocationLinkComponent } from './components/location-link/location-link.
                 source: 'assets'
             }
         }
-        // AOSEditOnlineService
     ],
     bootstrap: [AppComponent]
 })
