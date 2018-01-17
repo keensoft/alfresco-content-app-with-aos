@@ -4,6 +4,8 @@
 
 This project was developed during the [Alfresco Hackathon 2018](https://community.alfresco.com/docs/DOC-7234-projects-and-teams-hack-a-thon-at-devcon-2018) during the [Alfresco DevCon 2018](https://devcon.alfresco.com/) on Lisbon.
 
+The project makes use of the [Alfresco Content Application (ACA)](https://github.com/Alfresco/alfresco-content-app) project to create a **ready to test** docker project that runs Alfresco 201707GA along with the the ADF application enhanced with the "Edit On Ms Office" action.
+
 ### Starting point
 
 Recently Alfresco released the first draft for [Alfresco Content Application (ACA)](https://github.com/Alfresco/alfresco-content-app), the new UI app based on [Alfresco Development Framework (ADF)](https://community.alfresco.com/community/application-development-framework). As we developed an NG2 component for ADF some months ago [(ng2-alfresco-aos-online)](https://github.com/keensoft/ng2-alfresco-aos-editonline), it's time to experiment how to add new features to Alfresco Content Application by enhancing the app with an "Edit on MS Office" action. Likely a short tutorial on adding features to ACA and a working sample will be produced.
@@ -34,39 +36,40 @@ In order to change and rebuild the application, you will need to meet [ADF requi
 
 ## Run
 
-1. Go to alfresco-content-app
+1. build alfresco-content-app
 
 ```bash
 $ cd alfresco-content-app
-```
-
-2. Build the application using npm
-
-```bash
 $ npm run build
 ```
 
-3. Start docker-compoose (it can take some minutes in the first run to start)
+2. Start the project (it can take some minutes in the first run to start)
 
 ```bash
 $ cd ..
 $ docker-compose up --build
 ```
 
-4. Install the self signed CA Certificate used to sign the ssl certificate on `https://acs.example.com` service, which can be found in the `ssl` folder on the root of the project
+3. Install the self signed CA Certificate used to sign the ssl certificate present on `https://acs.example.com` (alfresco repo proxy reverse) service, the CA certificate can be found in the `ssl` folder on the root of the project
+
+Alfresco is served by a proxy reverse with SSL on front to meet [AOS requirements](https://docs.alfresco.com/aos/concepts/aos-prereqs.html)
 
 ```bash
 $ openssl ssl/CA.pem
 ```
 
-6) Configure the /etc/hosts file to map the IP address serving the apps with the hostnames ```acs.example.com``` and ```app.example.com```
+Follow normal steps to import a trusted CA on your system/browser accessing the application.
+
+4. Configure the /etc/hosts file to map the IP address running the project with the hostnames ```acs.example.com``` and ```app.example.com``` used by this docker project.
 
 ```bash
 127.0.1.4	app.example.com acs.example.com
 ```
 
-8) Access to [http://app.example.com:3000](http://app.example.com:3000)
+5. Access ADF 2.0.0 alfresco-content-app with "Edit on Ms Office" action
 
 ```bash
+ => [http://app.example.com:3000](http://app.example.com:3000)
+
 admin / admin
 ```
