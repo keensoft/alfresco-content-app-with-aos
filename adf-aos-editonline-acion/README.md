@@ -1,4 +1,4 @@
-# adf-aos-action
+# adf-aos-editonline-action
 
 <!-- markdown-toc start - Don't edit this section.  npm run toc to generate it-->
 
@@ -25,17 +25,15 @@
 
 ## Description
 
-This module provides the **Edit on Ms Office** action present in Alfresco Share to be used on ADF (Alfresco Development Framework) applications. 
+This module provides the **Edit on Ms Office** action present in Alfresco Share to be used on ADF [(Alfresco Development Framework)]() 2.0.0 applications. 
 
-The module was developed during the [Alfresco Global Hackathon 2017](https://community.alfresco.com/docs/DOC-7046-projects-and-teams-global-virtual-hack-a-thon-2017) and it was a lot of fun to do it. The idea of the "Alfresco Share ADF Components" project is to create angular reusable components holding functionalities present on Alfresco Share and often used by our clients.
-
-Special thanks to [Mario Romano](https://github.com/magemello) for kindly and patiently responding all my questions.
+The module was developed during the **Adding a new feature to Alfresco Content Application (ACA)** project of the [Alfresco Global Hackathon 2018](https://community.alfresco.com/docs/DOC-7234-projects-and-teams-hack-a-thon-at-devcon-2018#jive_content_id_Adding_a_new_feature_to_Alfresco_Content_Application_ACA). I did a previous similar [project](https://github.com/keensoft/ng2-alfresco-aos-editonline) that works for ADF 1.8.0 and 1.9.0. The idea of this projects is to create angular reusable components holding functionalities present on Alfresco Share and often used by our clients.
 
 ## Prerequisites
 
 Before you start using this module, make sure you have properly installed and configured Alfresco Office Services (AOS) on your Alfresco Content Services installation, [documentation](https://docs.alfresco.com/aos/concepts/aos-intro.html).
 
-For illustrating the use of the module I'll be using a demo application generated with the [**ng2-alfresco-app**](https://github.com/Alfresco/generator-ng2-alfresco-app) yeoman generator.
+For illustrating the use of the module I'll be using the [alfresco-content-app](https://github.com/Alfresco/alfresco-content-app)
 
 ## Office client requisites
 
@@ -66,7 +64,7 @@ Make sure you can access both services from the Office client.
 Install the **ng2-alfresco-aos-editonline** module into your ADF application
 
 ```sh
-npm install adf-aos-action --save
+npm install adf-aos-editonline-action --save
 ```
 
 
@@ -75,6 +73,7 @@ npm install adf-aos-action --save
 | package version | ADF version |
 | --- | --- |
 | 2.0.0 | 2.0.0 |
+| 2.0.1 | 2.0.0 |
 
 ## Basic usage
 
@@ -84,7 +83,7 @@ npm install adf-aos-action --save
 $ git clone https://github.com/Alfresco/alfresco-content-app.git
 $ cd alfresco-content-app
 $ npm install
-$ npm install adf-aos-action --save
+$ npm install adf-aos-editonline-action --save
 ```
 
 1. Import the module into the application
@@ -95,7 +94,7 @@ app.module.ts
 
 ```ts
     ...
-    import { AosModule } from 'adf-aos-action';
+    import { AosModule } from 'adf-aos-editonline-action';
     ...
     @NgModule({
         imports: [
@@ -138,7 +137,7 @@ On the FileComponent controller we need to implement the ```aosEditonline(event)
 src/app/components/files/files.component.ts
 
 ```ts
-    import { AosEditOnlineService } from 'adf-aos-action';
+    import { AosEditOnlineService } from 'adf-aos-editonline-action';
     ...
     constructor(
                 ...
@@ -158,21 +157,21 @@ $ npm start
 
 5. Test the action
 
-Access your application on http://<ecmHost>/files (after successfully logged in), navigate to a Ms document and click on the actions menu 
+Access your application on http://<ecmHost> (after successfully logged in), navigate to a Ms document and click on the actions menu 
 
 ## Screenshots
 
 ### **Execute "Edit on MS Office" action upon a ms file, for example a .pptx**
 
-![Detail of the action menu](https://raw.githubusercontent.com/keensoft/ng2-alfresco-aos-editonline/master/img/1.png)
+![Detail of the action menu](https://raw.githubusercontent.com/keensoft/alfresco-content-app-with-aos/master/img/1.png)
 
 ### **Give your Alfresco credentials**
 
-![Detail of the action menu](https://raw.githubusercontent.com/keensoft/ng2-alfresco-aos-editonline/master/img/2.png)
+![Detail of the action menu](https://raw.githubusercontent.com/keensoft/alfresco-content-app-with-aos/master/img/2.png)
 
 ### **Work with Alfresco content from within your Ms Office**
 
-![Detail of the action menu](https://raw.githubusercontent.com/keensoft/ng2-alfresco-aos-editonline/master/img/3.png)
+![Detail of the action menu](https://raw.githubusercontent.com/keensoft/alfresco-content-app-with-aos/master/img/3.png)
 
 
 ## Build from sources

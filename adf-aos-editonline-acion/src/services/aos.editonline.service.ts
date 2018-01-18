@@ -5,7 +5,6 @@ import {
   NotificationService,
   AppConfigService,
   ContentService,
-  TranslationService
 } from '@alfresco/adf-core';
 import { MinimalNodeEntryEntity } from 'alfresco-js-api';
 
@@ -47,7 +46,6 @@ export class AosEditOnlineService {
     private alfrescoAuthenticationService: AuthenticationService,
     private appConfigService: AppConfigService,
     private notificationService: NotificationService,
-    private translationService: TranslationService
   ) {    
   }
 
@@ -96,14 +94,12 @@ export class AosEditOnlineService {
     let protocolHandler = this.getProtocolForFileExtension(fileExtension);
 
     if (protocolHandler === undefined) {
-        let message: any = this.translationService.get('AOS.ERROR.NO_PROTOCOL_HANDLER');
-        this.notificationService.openSnackMessage(message.value, 3000);
+        this.notificationService.openSnackMessage(`No protocol handler found for {fileExtension}`, 3000);
         return;
     }
 
     if (!this.isWindows() && !this.isMacOs()) {
-        let message: any = this.translationService.get('AOS.ERROR.UNSUPPORTED_CLIENT_OS');
-        this.notificationService.openSnackMessage(message.value, 3000);
+        this.notificationService.openSnackMessage('Only supported for Windows and Mac', 3000);
     } else {
         this.aos_tryToLaunchOfficeByMsProtocolHandler(protocolHandler, url);
     }
@@ -141,11 +137,7 @@ export class AosEditOnlineService {
     let that = this;
     setTimeout(function() {
       input.onblur = null;
-      input.remove();
-      if (!protocolHandlerPresent) {
-          let message: any = that.translationService.get('AOS.ERROR.UNSUPPORTED_CLIENT_VERSION');
-          that.notificationService.openSnackMessage(message.value, 3000);
-      }
+      input.remove();      
     }, 500);
   }
 
