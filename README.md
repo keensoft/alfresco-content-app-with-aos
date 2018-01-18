@@ -10,19 +10,19 @@ The project makes use of the [Alfresco Content Application (ACA)](https://github
 
 Recently Alfresco released the first draft for [Alfresco Content Application (ACA)](https://github.com/Alfresco/alfresco-content-app), the new UI app based on [Alfresco Development Framework (ADF)](https://community.alfresco.com/community/application-development-framework). As we developed an NG2 component for ADF some months ago [(ng2-alfresco-aos-online)](https://github.com/keensoft/ng2-alfresco-aos-editonline), it's time to experiment how to add new features to Alfresco Content Application by enhancing the app with an "Edit on MS Office" action. Likely a short tutorial on adding features to ACA and a working sample will be produced.
 
-### tasks done
+### Tasks completed
 
-* Update the old [ng2-alfresco-aos-editonline](https://www.npmjs.com/package/ng2-alfresco-aos-editonline) npm module to version 0.1.6 supporting ADF 1.9.0
-* Create a new [adf-aos-editonline-action](https://www.npmjs.com/package/adf-aos-editonline-action) npm module starting on version 2.0.0 to support ADF 2.0.0 onwards.
-* Create a new docker project based on [alfresco-docker-template](https://github.com/keensoft/alfresco-docker-template) to create the following stack
-  * alfresco repo 201707GA
-  * share 201707GA
-  * nginx (serving alfresco-content-app)
-  * solr6
-  * postgres 9.4
-  * libreoffice 5.2
-* Import the **adf-aos-editonline-action** module to the alfresco-content-app application
-* Configure the **FileComponent** to use the module and add the "Edit on Ms Office" action
+* Update the old [ng2-alfresco-aos-editonline](https://www.npmjs.com/package/ng2-alfresco-aos-editonline) npm module to version 0.1.6 supporting ADF 1.9.0;
+* Create a new [adf-aos-editonline-action](https://www.npmjs.com/package/adf-aos-editonline-action) npm module starting on version 2.0.0 to support ADF 2.0.0 onwards. Used [ng-packgr](https://github.com/dherges/ng-packagr) to created;
+* Create a new docker project based on [alfresco-docker-template](https://github.com/keensoft/alfresco-docker-template) to create the following stack:
+  * alfresco repo 201707GA;
+  * share 201707GA;
+  * nginx (serving alfresco-content-app);
+  * solr6;
+  * postgres 9.4;
+  * libreoffice 5.2;
+* Import the **adf-aos-editonline-action** module to the alfresco-content-app application;
+* Configure the **FileComponent** to use the module and add the "Edit on Ms Office" action.
 
 ## Integration path
 
@@ -210,7 +210,7 @@ Follow normal steps to import a trusted CA on your system/browser accessing the 
 [http://app.example.com:3000](http://app.example.com:3000)
 
 ```bash
-admin / admin
+ admin / admin
 ```
 
 We have tested with Windows 10 + Office 365, Mac should work too
