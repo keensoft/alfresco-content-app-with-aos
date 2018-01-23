@@ -12,17 +12,17 @@ Recently Alfresco released the first draft for [Alfresco Content Application (AC
 
 ### Tasks completed
 
-* Update the old [ng2-alfresco-aos-editonline](https://www.npmjs.com/package/ng2-alfresco-aos-editonline) npm module to version 0.1.6 supporting ADF 1.9.0;
-* Create a new [adf-aos-editonline-action](https://www.npmjs.com/package/adf-aos-editonline-action) npm module starting on version 2.0.0 to support ADF 2.0.0 onwards. Used [ng-packgr](https://github.com/dherges/ng-packagr) to created;
+* Update the old [ng2-alfresco-aos-editonline](https://www.npmjs.com/package/ng2-alfresco-aos-editonline) npm module to version 0.1.6 supporting ADF 1.9.0
+* Create a new [adf-aos-editonline-action](https://www.npmjs.com/package/adf-aos-editonline-action) npm module starting on version 2.0.0 to support ADF 2.0.0 onwards. Used [ng-packgr](https://github.com/dherges/ng-packagr) to created
 * Create a new docker project based on [alfresco-docker-template](https://github.com/keensoft/alfresco-docker-template) to create the following stack:
-  * alfresco repo 201707GA;
-  * share 201707GA;
-  * nginx (serving alfresco-content-app);
-  * solr6;
-  * postgres 9.4;
-  * libreoffice 5.2;
-* Import the **adf-aos-editonline-action** module to the alfresco-content-app application;
-* Configure the **FileComponent** to use the module and add the "Edit on Ms Office" action.
+  * alfresco repo 201707GA
+  * share 201707GA
+  * nginx (serving alfresco-content-app)
+  * solr6
+  * postgres 9.4
+  * libreoffice 5.2
+* Import the **adf-aos-editonline-action** module to the alfresco-content-app application
+* Configure the **FileComponent** to use the module and add the "Edit on Ms Office" action
 
 ## Integration path
 
@@ -34,7 +34,7 @@ In order to enhance the alfresco-content-app, we followed this steps
 ng generate service modules/aos/aos.editonline 
 ```
 
-This creates a new `aos.editonline.service.ts` file inside `src/app/modules/aos` with minimal content, there goes the AOS action logic, check the complete code [here](https://github.com/keensoft/alfresco-content-app-with-aos/blob/master/adf-aos-editonline-acion/src/services/aos.editonline.service.ts), for simplicity we only showing the public method that other component of the application may call.
+This creates a new `aos.editonline.service.ts` file inside `src/app/modules/aos` with minimal content, there goes the AOS action logic, check the complete code [here](https://github.com/keensoft/alfresco-content-app-with-aos/blob/master/adf-aos-editonline-acion/src/services/aos.editonline.service.ts), for simplicity we only showing the public method that gets called when the action is fired.
 
 ```ts
 import { Injectable } from '@angular/core';
@@ -120,26 +120,26 @@ import { AosModule } from './src/app/modules/aos/aos.module';
 
 ```html
 				<adf-document-list #documentList
-                ...
-                [contentActions]="true"
-              	...
+          ...
+          [contentActions]="true"
+        	...
 
-                <data-columns>
-                ...
-                </data-columns>
-				<content-actions>
-                    <content-action
-                        icon="build"
-                        target="document"
-                        permission="update"
-                        [disableWithNoPermission]="true"
-                        (permissionEvent)="handlePermissionError($event)"
-                        title="{{ACTION.AOS.TITLE | translate }}"
-                        (success)="onContentActionSuccess($event)"
-                        (execute)="aosEditonline($event)">
-                    </content-action>
-                </content-actions>
-             </adf-document-list>
+          <data-columns>
+          ...
+          </data-columns>
+	        <content-actions>
+              <content-action
+                  icon="build"
+                  target="document"
+                  permission="update"
+                  [disableWithNoPermission]="true"
+                  (permissionEvent)="handlePermissionError($event)"
+                  title="{{ACTION.AOS.TITLE | translate }}"
+                  (success)="onContentActionSuccess($event)"
+                  (execute)="aosEditonline($event)">
+              </content-action>
+          </content-actions>
+       </adf-document-list>
 ```
 
 `src/app/components/files/files.component.ts`
@@ -194,7 +194,7 @@ $ docker-compose up --build
 Alfresco is served by a proxy reverse with SSL on front to meet [AOS requirements](https://docs.alfresco.com/aos/concepts/aos-prereqs.html)
 
 ```bash
-$ openssl ssl/CA.pem
+$ openssl x509 -in ssl/CA.pem -text
 ```
 
 Follow normal steps to import a trusted CA on your system/browser accessing the application.
